@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Knowledge point</title>
+    <link rel="stylesheet" href="{% static 'st.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,300;1,500&family=Qahiri&display=swap" rel="stylesheet">
+<link  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" >
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<script src="https://use.fontawesome.com/18a5f03e14.js"></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="/"><img src="{% static 'images/logo.png' %}"></a>
+            <div class="nav-links" id="navlink">
+                <ul>
+                  <div class="center-me">
+                  <i class="fa fa-times-circle-o fa-5x" class="size" onclick="hidemenu()" ></i>
+                </div>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="about">ABOUT</a></li>
+                    <li><a href="courses">COURSE</a></li>
+                      <li><a href="gallery">GALLERY</a></li>
+                    <li><a href="contact">CONTACT</a></li>
+                </ul>
+            </div>
+
+              <i class="fa fa-bars fa-5x " onclick="showmenu()"></i>
+
+        </nav>
+    <div class="text-box">
+        <h2>KNOWLEDGE 📘</h2>
+        <h4>POINT</h4>
+        <a href="contact" class="hero-btn">Visit To Know Us More</a>
+    </div>
+    </section>
+    <!-- course -->
+    <section class="course">
+        <h1>COURSES</h1>
+        <p><p>
+
+            <div id="row">
+                <div id="course-col">
+                    <h3>Intermediate</h3>
+                    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown ..</p>
+                </div>
+                <div id="course-col">
+                    <h3>degree</h3>
+                    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown ..</p>
+                </div>
+                <div id="course-col">
+                    <h3>High School</h3>
+                    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown ..</p>
+                </div>
+            </div>
+    </section>
+    <!-- campus -->
+    <section class="campus">
+        <h1>Our branches</h1>
+        <div id="row">
+            <div class="campus-col">
+                <img src="{% static 'images/london.png' %}">
+                <div class="layer">
+                    <h3>Gandhi chowk</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{% static 'images/newyork.png' %}">
+                <div class="layer">
+                    <h3>Near Rajasthan Sweets</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{% static 'images/washington.png' %}">
+                <div class="layer">
+                    <h3>dwarka Mor</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonials -->
+    <section class="testimonials">
+        <h1>What Our Student Says</h1>
+        <p>Some precious Student of knowledge</p>
+
+        <div id="row">
+            <div class="testimonial-col">
+                <img src="{% static 'images/user2.jpg' %}">
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex consectetur quos magni quibusdam, odio eius maiores, veniam quaerat officiis rerum consequatur culpa sit excepturi facilis sed facere vero exercitationem!
+                    </p>
+                    <div class="name" >
+                    <h3>Priyesh</h3><h4>-  From NSIT</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-col">
+                <img src="{% static 'images/user2.jpg' %}">
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ex consectetur quos magni quibusdam, odio eius maiores, veniam quaerat officiis rerum consequatur culpa sit excepturi facilis sed facere vero exercitationem!
+                    </p>
+                    <div class="name" >
+                        <h3>Ravi</h3><h4>-  From NSIT</h4>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- contact us for action -->
+   <section class="cta">
+       <h1> Contact us For Enrollment</h1>
+       <a href="contact" class="hero-btn">CONTACT US</a>
+   </section>
+
+   <!-- footer -->
+   <section class="footer">
+       <h4>About US</h4>
+       <p>Knowledge Point is not an institute where you get knowledge but it is the place where your dream turns into reality</p>
+   <div class="icons">
+      <a href="https://www.facebook.com/Knowledge-Point-KP-112027447164573" <i class="fa fa-facebook fa-3x" ></i></a>
+         <a href="https://www.facebook.com/Knowledge-Point-KP-112027447164573" <i class="fa fa-instagram fa-3x" ></i></a>
+           <a href="https://www.facebook.com/Knowledge-Point-KP-112027447164573" <i class="fa fa-youtube fa-3x" ></i></a>
+
+   </div>
+   <p>Made with <i class="fa fa-heart"></i> by Rohit</p>
+    </section>
+</body>
+
+<!-- javascript for toggle menu -->
+<script>
+var nav=document.getElementById("navlink");
+function showmenu()
+{
+
+    nav.style.display="block";
+        nav.classList.add("animate1");
+       setTimeout(function(){
+           nav.classList.remove("animate1");
+       }, 1000);
+
+}
+function hidemenu()
+{
+
+
+    nav.classList.add("animate2");
+    setTimeout(function(){
+        nav.classList.remove("animate2");
+        nav.style.display="none";
+    }, 1000);
+
+}
+
+
+
+</script>
+</html>

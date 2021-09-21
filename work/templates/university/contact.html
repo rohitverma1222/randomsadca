@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Contact KP</title>
+    <link rel="stylesheet" href="{% static 'st.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,300;1,500&family=Qahiri&display=swap" rel="stylesheet">
+<link  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" >
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<script src="https://use.fontawesome.com/18a5f03e14.js"></script>
+
+</head>
+<body>
+    <section class="sub-header">
+      <nav>
+          <a href="index.html"><img src="{% static 'images/logo.png' %}"></a>
+          <div class="nav-links" id="navlink">
+              <ul>
+                <div class="center-me">
+                <i class="fa fa-times-circle-o fa-5x" class="size" onclick="hidemenu()" ></i>
+              </div>
+              <li><a href="/">HOME</a></li>
+              <li><a href="about">ABOUT</a></li>
+              <li><a href="courses">COURSE</a></li>
+                <li><a href="gallery">GALLERY</a></li>
+              <li><a href="contact">CONTACT</a></li>
+              </ul>
+          </div>
+
+            <i class="fa fa-bars fa-5x " onclick="showmenu()"></i>
+
+      </nav>
+
+
+        <h1>Contact us</h1>
+
+    </section>
+
+    <!-- about us content -->
+<section class="location">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7922151045964!2d77.02985261508265!3d28.635988982416524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d056cf1965c55%3A0xe8c67c3b4eb629ce!2sKnowledge%20Point!5e0!3m2!1sen!2sin!4v1629091630302!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+
+    <section class="contact-us">
+        <h1 class="contact-head">Contact us</h1>
+        <p>Fill this form so we can Contact you</p>
+      <div class="rowss">
+        <div class="contact-col">
+          <form class="" action="contact" method="post">{% csrf_token %}
+            <input type="text" placeholder="Enter Your Name" name="yourName" required>
+            <input type="email" placeholder="Enter email address " name="email" required>
+                  <input type="text" placeholder="Enter Your phone Number " name="phone" required>
+            <input type="text" placeholder="Enter subject you want to study or Course Name" name="subject" required>
+            <textarea rows="8" placeholder="Message" name="Message" required></textarea>
+            <button type="submit" class="hero-btn red-btn" id="send-btn"> Send Message</button>
+          </form>
+
+        </div>
+<div class="contact-details">
+        <div class="contact-col">
+          <div>
+            <i class="fa fa-home"></i>
+            <span>
+              <h5>H. No - 11,Mohan garden</h5>
+              <p>gandhi Chowk</p>
+            </span>
+          </div>
+        </div>
+        <div class="contact-col">
+          <div>
+            <i class="fa fa-phone"></i>
+            <span>
+              <h5>8076309203,8882842064</h5>
+              <p>Abhishek , Sunil</p>
+            </span>
+          </div>
+        </div>
+        <div class="contact-col">
+          <div>
+            <i class="fa fa-envelope-o"></i>
+            <span>
+              <h5>knowledgepoint.as@gmail.com</h5>
+              <p></p>
+            </span>
+          </div>
+        </div>
+        </div>
+
+<!-- form -->
+
+      </div>
+    </section>
+</body>
+
+
+   <!-- footer -->
+   <section class="footer">
+       <h4>About US</h4>
+       <p>Knowledge Point is not an institute where you get knowledge but it is the place where your dream turns into reality</p>
+   <div class="icons">
+     <a href="https://www.facebook.com/Knowledge-Point-KP-112027447164573" <i class="fa fa-facebook fa-3x" ></i></a>
+        <a href="https://www.facebook.com/Knowledge-Point-KP-112027447164573" <i class="fa fa-instagram fa-3x" ></i></a>
+          <a href="https://www.facebook.com/Knowledge-Point-KP-112027447164573" <i class="fa fa-youtube fa-3x" ></i></a>
+
+   </div>
+   <p>Made with <i class="fa fa-heart"></i> by Rohit</p>
+    </section >
+
+<!-- javascript for toggle menu -->
+<script>
+var nav=document.getElementById("navlink");
+function showmenu()
+{
+
+    nav.style.display="block";
+        nav.classList.add("animate1");
+       setTimeout(function(){
+           nav.classList.remove("animate1");
+       }, 1000);
+
+}
+function hidemenu()
+{
+
+
+    nav.classList.add("animate2");
+    setTimeout(function(){
+        nav.classList.remove("animate2");
+        nav.style.display="none";
+    }, 1000);
+
+}
+
+
+</script>
+</html>
